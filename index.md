@@ -12,6 +12,13 @@ title: Home
     margin: 20px 0 40px 0;
 }
 
+/* Stile per il link che avvolge la card */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Rende il link un blocco per avvolgere il div */
+}
+
 .card {
     background: #ffffff;
     padding: 25px;
@@ -19,9 +26,11 @@ title: Home
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     border: 1px solid #eee;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 100%; /* Assicura che le card abbiano altezza uniforme */
 }
 
-.card:hover {
+/* Effetto hover spostato sul link contenitore */
+.card-link:hover .card {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
@@ -94,26 +103,42 @@ Attualmente lavoro presso **NADARA Spa**, gestendo infrastrutture critiche e dis
 
 ### 🔬 Laboratori di Networking (PNetLab)
 <div class="grid-container">
-  <div class="card">
-    <h3>Design OSPF Scalabile</h3>
-    <p>Analisi comparativa Single-Area vs. Multi-Area e impatto sulla stabilità LSDB.</p>
-  </div>
-  <div class="card">
-    <h3>Fabric L3 Spine-Leaf</h3>
-    <p>Data Center Fabric con OSPF come underlay e BGP per la distribuzione rotte.</p>
-  </div>
-  <div class="card">
-    <h3>Greenfield DC con EVPN</h3>
-    <p>Architettura moderna con MP-BGP EVPN per overlay e control plane.</p>
-  </div>
-  <div class="card">
-    <h3>Nexus vPC & LACP</h3>
-    <p>Alta affidabilità e aggregazione di banda su switch Cisco Nexus.</p>
-  </div>
-  <div class="card">
-    <h3>DCI con VXLAN Statico</h3>
-    <p>Estensione L2 tra siti (Data Center Interconnect) via tunnel VXLAN.</p>
-  </div>
+
+  <a href="https://github.com/davidaulicino17/Laboratory_PNETLAB/tree/main/LAB_%20Design%20OSPF%20Scalabile_Single-Area_vs.%20Multi-Area" class="card-link" target="_blank">
+      <div class="card">
+        <h3>Design OSPF Scalabile</h3>
+        <p>Analisi comparativa Single-Area vs. Multi-Area e impatto sulla stabilità LSDB.</p>
+      </div>
+  </a>
+
+  <a href="https://github.com/davidaulicino17/Laboratory_PNETLAB/tree/main/LAB_L3_Spine-Leaf_Fabric_BGP_and_OSPF" class="card-link" target="_blank">
+      <div class="card">
+        <h3>Fabric L3 Spine-Leaf</h3>
+        <p>Data Center Fabric con OSPF come underlay e BGP per la distribuzione rotte.</p>
+      </div>
+  </a>
+
+  <a href="https://github.com/davidaulicino17/Laboratory_PNETLAB/tree/main/LAB_Fabric_Datacenter_Greenfield_con_MP-BGP_EVPN" class="card-link" target="_blank">
+      <div class="card">
+        <h3>Greenfield DC con EVPN</h3>
+        <p>Architettura moderna con MP-BGP EVPN per overlay e control plane.</p>
+      </div>
+  </a>
+
+  <a href="https://github.com/davidaulicino17/Laboratory_PNETLAB/tree/main/LAB_Nexus_vPC_Domain_Setup_with_LACP" class="card-link" target="_blank">
+      <div class="card">
+        <h3>Nexus vPC & LACP</h3>
+        <p>Alta affidabilità e aggregazione di banda su switch Cisco Nexus.</p>
+      </div>
+  </a>
+
+  <a href="https://github.com/davidaulicino17/Laboratory_PNETLAB/tree/main/LAB_Integrazione_Brownfield-Greenfield_con_DCI_VXLAN" class="card-link" target="_blank">
+      <div class="card">
+        <h3>DCI con VXLAN Statico</h3>
+        <p>Estensione L2 tra siti (Data Center Interconnect) via tunnel VXLAN.</p>
+      </div>
+  </a>
+
 </div>
 
 ---
