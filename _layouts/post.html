@@ -1,29 +1,22 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-</head>
-<body>
+---
+layout: default
+---
 
-    <div class="post-container">
-        
-        <h1>{{ page.title }}</h1>
-        
-        <div class="post-meta">
-            Pubblicato il {{ page.date | date: "%d/%m/%Y" }}
-        </div>
+<article class="page-content" style="margin-top: 0;">
+  
+  <header style="margin-bottom: 40px; text-align: center;">
+    <h1>{{ page.title }}</h1>
+    <span class="post-meta">Pubblicato il {{ page.date | date: "%d/%m/%Y" }}</span>
+  </header>
 
-        <div class="post-content">
-            {{ content }}
-        </div>
+  <div class="post-content">
+    {{ content }}
+  </div>
+  
+  <hr style="margin: 60px 0 40px 0; border: 0; border-top: 1px solid #eee;">
+  
+  <div style="text-align: center;">
+      <a href="{{ '/' | relative_url }}" class="btn">← Torna alla Home</a>
+  </div>
 
-        <hr style="margin: 40px 0; border: 0; border-top: 1px solid #eee;">
-        <a href="/" class="btn">← Torna alla Home</a>
-
-    </div>
-
-</body>
-</html>
+</article>
