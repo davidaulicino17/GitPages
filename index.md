@@ -3,6 +3,53 @@ layout: default
 title: Home
 ---
 
+<style>
+/* Stili specifici per la griglia della Home Page */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 20px 0 40px 0;
+}
+
+.card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #0056b3;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* Stile per la lista post */
+.post-list-home {
+    list-style: none;
+    padding: 0;
+}
+.post-list-home li {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #eee;
+}
+</style>
+
 # Ciao, sono David Aulicino 👋
 
 Benvenuto nel mio spazio personale.
@@ -72,11 +119,11 @@ Attualmente lavoro presso **NADARA Spa**, gestendo infrastrutture critiche e dis
 ---
 
 ### 📝 Ultimi Articoli dal Blog
-<ul>
+<ul class="post-list-home">
   {% for post in site.posts %}
     <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a> - 
-      <small style="color: #888;">{{ post.date | date: "%d/%m/%Y" }}</small>
+      <span style="color: #888; font-size: 0.85rem; margin-right: 10px;">{{ post.date | date: "%d/%m/%Y" }}</span>
+      <a href="{{ post.url | relative_url }}" style="font-weight: bold;">{{ post.title }}</a>
     </li>
   {% endfor %}
 </ul>
@@ -90,4 +137,7 @@ Attualmente lavoro presso **NADARA Spa**, gestendo infrastrutture critiche e dis
 * Cinema e Lettura
 
 ---
-[LinkedIn](https://www.linkedin.com/in/david-aulicino-b9371648) | [Contattami](mailto:david.aulicino@tiscali.it)
+<div style="text-align: center; margin-top: 40px;">
+    <a href="https://www.linkedin.com/in/david-aulicino-b9371648" target="_blank" class="btn">LinkedIn</a>
+    <a href="mailto:david.aulicino@tiscali.it" class="btn">Contattami</a>
+</div>
