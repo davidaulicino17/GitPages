@@ -91,3 +91,43 @@ Attualmente lavoro presso **NADARA Spa**, gestendo infrastrutture critiche e dis
 
 ---
 [LinkedIn](https://www.linkedin.com/in/david-aulicino-b9371648) | [Contattami](mailto:david.aulicino@tiscali.it)
+
+<style>
+  /* Griglia per le Card */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  /* Design della singola Card */
+  .card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.2s, border-color 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  }
+  
+  /* Effetto al passaggio del mouse */
+  .card:hover {
+    transform: translateY(-5px);
+    border-color: #3b9cff;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+  }
+  
+  .card h3 {
+    margin-top: 0;
+    color: #3b9cff !important; /* Forza il colore azzurro */
+    font-size: 1.1em;
+  }
+  
+  .card p {
+    margin-bottom: 0;
+    font-size: 0.9em;
+    color: #ddd;
+  }
+</style>
