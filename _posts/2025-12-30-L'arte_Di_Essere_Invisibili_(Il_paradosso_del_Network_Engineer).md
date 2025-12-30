@@ -58,5 +58,7 @@ Ma se state leggendo questo post dal vostro telefono, magari mentre sfrecciate i
 
 E a noi va bene così. Basta che non ci (E NON MI) chiamiate "tecnici del computer".
 
+*David Aulicino*
+
 ---
 *Ti è piaciuto il post? Connettiamoci su [LinkedIn](https://www.linkedin.com/in/david-aulicino-b9371648) o dai un'occhiata ai miei progetti su GitHub!*

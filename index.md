@@ -6,10 +6,10 @@ title: Home
 <style>
 /* Stili specifici per la griglia della Home Page */
 .grid-container {
-    /* Ridotto minmax da 280px a 240px per evitare sovrapposizioni su schermi piccoli */
+    /* MODIFICA EFFETTUATA: Ridotto a 200px per rendere le card più piccole e fluide */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 15px; /* Ridotto leggermente il gap */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
     margin: 20px 0 40px 0;
 }
 
@@ -18,38 +18,40 @@ title: Home
     text-decoration: none;
     color: inherit;
     display: block;
-    height: 100%; /* Importante per rendere cliccabile tutta l'area */
+    height: 100%;
 }
 
 .card {
     background: #ffffff;
-    padding: 20px; /* Ridotto da 25px a 20px per renderle più compatte */
-    border-radius: 10px;
+    /* MODIFICA EFFETTUATA: Padding ridotto a 15px per compattezza */
+    padding: 15px; 
+    border-radius: 8px; /* Bordi leggermente meno arrotondati */
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     border: 1px solid #eee;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    height: 100%; /* Assicura che le card abbiano altezza uniforme */
+    height: 100%; 
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-/* Effetto hover spostato sul link contenitore */
 .card-link:hover .card {
-    transform: translateY(-5px);
+    transform: translateY(-3px); /* Movimento più sottile */
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .card h3 {
     margin-top: 0;
-    font-size: 1.1rem; /* Ridotto leggermente il font del titolo */
+    font-size: 1rem; /* Titolo leggermente più piccolo */
     color: #0056b3;
+    margin-bottom: 5px;
 }
 
 .card p {
-    font-size: 0.9rem; /* Ridotto leggermente il testo */
+    font-size: 0.85rem; /* Testo descrizione più piccolo */
     color: #555;
     margin-bottom: 0;
+    line-height: 1.4;
 }
 
 /* Stile per la lista post */
@@ -98,7 +100,6 @@ Attualmente lavoro presso **NADARA Spa**, gestendo infrastrutture critiche e dis
 ### 💻 Software & Tools
 
 <div class="grid-container" style="grid-template-columns: 1fr;"> 
-
   <a href="https://github.com/davidaulicino17/EXAM-SIMULATOR-PUBLIC" class="card-link" target="_blank">
     <div class="card" style="border-left: 5px solid #3b9cff;">
       <h3>Exam Simulator - Pro Edition v3.0</h3>
