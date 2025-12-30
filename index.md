@@ -6,9 +6,10 @@ title: Home
 <style>
 /* Stili specifici per la griglia della Home Page */
 .grid-container {
+    /* Ridotto minmax da 280px a 240px per evitare sovrapposizioni su schermi piccoli */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px; /* Ridotto leggermente il gap */
     margin: 20px 0 40px 0;
 }
 
@@ -16,17 +17,21 @@ title: Home
 .card-link {
     text-decoration: none;
     color: inherit;
-    display: block; /* Rende il link un blocco per avvolgere il div */
+    display: block;
+    height: 100%; /* Importante per rendere cliccabile tutta l'area */
 }
 
 .card {
     background: #ffffff;
-    padding: 25px;
+    padding: 20px; /* Ridotto da 25px a 20px per renderle più compatte */
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     border: 1px solid #eee;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     height: 100%; /* Assicura che le card abbiano altezza uniforme */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Effetto hover spostato sul link contenitore */
@@ -37,12 +42,12 @@ title: Home
 
 .card h3 {
     margin-top: 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* Ridotto leggermente il font del titolo */
     color: #0056b3;
 }
 
 .card p {
-    font-size: 0.95rem;
+    font-size: 0.9rem; /* Ridotto leggermente il testo */
     color: #555;
     margin-bottom: 0;
 }
@@ -92,11 +97,16 @@ Attualmente lavoro presso **NADARA Spa**, gestendo infrastrutture critiche e dis
 
 ### 💻 Software & Tools
 
-<div class="card" style="border-left: 5px solid #3b9cff;">
-  <h3>Exam Simulator - Pro Edition v3.0</h3>
-  <p>Un simulatore d'esame desktop moderno e portatile in Python (CustomTkinter). Nessuna installazione, supporto JSON/CSV, Dark Mode e statistiche avanzate.</p>
-  <br>
-  <em>Database supportati: CCNA, CCNP, CCDE.</em>
+<div class="grid-container" style="grid-template-columns: 1fr;"> 
+
+  <a href="https://github.com/davidaulicino17/EXAM-SIMULATOR-PUBLIC" class="card-link" target="_blank">
+    <div class="card" style="border-left: 5px solid #3b9cff;">
+      <h3>Exam Simulator - Pro Edition v3.0</h3>
+      <p>Un simulatore d'esame desktop moderno e portatile in Python (CustomTkinter). Nessuna installazione, supporto JSON/CSV, Dark Mode e statistiche avanzate.</p>
+      <br>
+      <em>Database supportati: CCNA, CCNP, CCDE.</em>
+    </div>
+  </a>
 </div>
 
 ---
