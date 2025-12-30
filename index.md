@@ -41,6 +41,18 @@ Qui raccolgo configurazioni di rete complesse che ho costruito e testato, con un
 
 ---
 
+### 📝 Blog & Aggiornamenti
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a> - 
+      <small>{{ post.date | date: "%d/%m/%Y" }}</small>
+    </li>
+  {% endfor %}
+</ul>
+
+---
+
 ### I miei interessi
 * Network Engineering & Security
 * Automazione (Python, C++)
