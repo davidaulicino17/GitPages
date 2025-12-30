@@ -3,24 +3,23 @@
    =========================== */
 :root {
     --primary-color: #0056b3;
-    --bg-color: #f9f9f9;     /* Sfondo pagina leggermente grigio */
-    --card-bg: #ffffff;      /* Sfondo carta bianco */
-    --text-color: #2a2a2a;   /* Grigio scuro (più morbido del nero assoluto) */
+    --bg-color: #f9f9f9;     
+    --card-bg: #ffffff;      
+    --text-color: #2a2a2a;   
     --meta-color: #666;
     --spacing: 20px;
 }
 
 body {
-    font-family: 'Georgia', 'Times New Roman', serif; /* Font Serif per il corpo è più elegante per la lettura lunga */
+    font-family: 'Georgia', 'Times New Roman', serif; 
     background-color: var(--bg-color);
     color: var(--text-color);
     margin: 0;
     padding: 0;
-    line-height: 1.8; /* Interlinea molto ariosa */
-    font-size: 20px;  /* Dimensione base aumentata */
+    line-height: 1.8; 
+    font-size: 20px;  
 }
 
-/* Se preferisci il font moderno (sans-serif) scommenta questa riga e commenta quella sopra */
 /* body { font-family: 'Inter', Helvetica, Arial, sans-serif; } */
 
 a { text-decoration: none; color: var(--primary-color); font-weight: 600; }
@@ -30,7 +29,7 @@ a:hover { text-decoration: underline; }
    LAYOUT GENERALE
    =========================== */
 .container {
-    max-width: 1000px; /* Larghezza per Header e Footer */
+    max-width: 1000px; 
     margin: 0 auto;
     padding: 0 var(--spacing);
 }
@@ -41,7 +40,7 @@ a:hover { text-decoration: underline; }
     border-bottom: 1px solid #eaeaea;
     padding: 20px 0;
     margin-bottom: 60px;
-    font-family: 'Inter', sans-serif; /* Manteniamo l'header moderno */
+    font-family: 'Inter', sans-serif; 
 }
 
 .site-header .container {
@@ -76,30 +75,40 @@ a:hover { text-decoration: underline; }
 }
 
 /* ===========================
-   CARD E POST (Layout "Lettura Focalizzata")
+   SEPARAZIONE LAYOUT (HOME vs POST)
    =========================== */
 
-/* Questo gestisce sia la Home che il singolo Post */
-.post-card, .page-content {
+/* 1. Stile per la HOME PAGE (Larga) */
+/* Questa classe gestisce la scatola principale della Home */
+.page-content {
+    background: transparent; /* Sfondo trasparente per la home, così le card si staccano */
+    max-width: 1000px;       /* LARGHEZZA TOTALE (come il container) */
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: none;        /* Nessuna ombra sul contenitore generale */
+}
+
+/* 2. Stile specifico per il SINGOLO POST (Stretto) */
+/* Questa è la nuova classe che useremo solo nei post */
+.post-reading {
     background: var(--card-bg);
     
-    /* QUI SI GIOCA TUTTO: Restringiamo la larghezza massima del testo */
-    max-width: 720px; 
-    margin: 0 auto;   /* Centra la card */
+    /* <--- QUI LA MODIFICA PER I SOLI POST */
+    max-width: 600px;  
     
-    padding: 60px 50px; /* Molto spazio interno */
-    border-radius: 8px; /* Bordi meno arrotondati, più professionali */
-    box-shadow: 0 2px 20px rgba(0,0,0,0.04); /* Ombra leggerissima ed elegante */
+    margin: 0 auto;
+    padding: 60px 50px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 20px rgba(0,0,0,0.04); 
 }
 
 /* ===========================
-   TIPOGRAFIA ARTICOLI (Gerarchia e Grandezza)
+   TIPOGRAFIA ARTICOLI
    =========================== */
 
-/* Titolo Principale (H1) */
 h1 { 
     font-family: 'Inter', sans-serif;
-    font-size: 3rem;       /* Molto grande (circa 48px) */
+    font-size: 3rem;       
     font-weight: 800;
     line-height: 1.1;
     color: #111;
@@ -107,18 +116,16 @@ h1 {
     letter-spacing: -1px;
 }
 
-/* Sottotitoli (H2) */
 h2 { 
     font-family: 'Inter', sans-serif;
-    font-size: 2rem;       /* Grande (circa 32px) */
+    font-size: 2rem;       
     font-weight: 700;
     color: #111;
-    margin-top: 60px;      /* Molto spazio prima del nuovo paragrafo */
+    margin-top: 60px;      
     margin-bottom: 20px;
     line-height: 1.2;
 }
 
-/* Sottotitoli minori (H3) */
 h3 { 
     font-family: 'Inter', sans-serif;
     font-size: 1.5rem; 
@@ -126,15 +133,13 @@ h3 {
     margin-top: 40px;
 }
 
-/* Paragrafi (Il corpo del testo) */
 p {
-    font-size: 1.35rem;    /* Circa 21.6px - Ottimo per lettura lunga */
-    line-height: 1.7;      /* Spaziatura tra le righe */
-    margin-bottom: 1.8rem; /* Spazio tra i paragrafi */
-    color: #292929;        /* Nero non assoluto per non stancare */
+    font-size: 1.35rem;    
+    line-height: 1.7;      
+    margin-bottom: 1.8rem; 
+    color: #292929;        
 }
 
-/* Liste puntate */
 ul, ol {
     font-size: 1.25rem;
     margin-bottom: 2rem;
@@ -146,7 +151,6 @@ li {
     line-height: 1.6;
 }
 
-/* Meta Data (Data pubblicazione) */
 .post-meta {
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
@@ -154,20 +158,19 @@ li {
     text-transform: uppercase;
     letter-spacing: 1px;
     display: block;
-    margin-bottom: 40px; /* Spazio tra data e inizio testo */
+    margin-bottom: 40px; 
     font-weight: 500;
 }
 
-/* Immagini */
 img {
     max-width: 100%;
     border-radius: 4px;
     display: block;
-    margin: 40px auto; /* Spazio sopra e sotto le immagini */
+    margin: 40px auto; 
 }
 
 /* ===========================
-   STILI SPECIFICI HOME PAGE
+   STILI HOME PAGE
    =========================== */
 .post-list {
     list-style: none;
@@ -180,18 +183,12 @@ img {
     padding-bottom: 30px;
 }
 
-.post-list h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-/* Bottone generico */
 .btn {
     display: inline-block;
     padding: 12px 24px;
     background-color: var(--primary-color);
     color: white !important;
-    border-radius: 50px; /* Bottone a pillola */
+    border-radius: 50px; 
     font-size: 1rem;
     font-weight: 600;
     transition: background 0.3s;
@@ -201,15 +198,21 @@ img {
     text-decoration: none;
 }
 
-/* ===========================
-   MOBILE (Adattamento smartphone)
-   =========================== */
+/* Card generiche (per la griglia home) */
+.card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+
 @media (max-width: 768px) {
-    .post-card, .page-content {
-        padding: 30px 20px; /* Meno padding laterale su mobile */
+    .post-reading {
+        padding: 30px 20px; 
     }
     
     h1 { font-size: 2.2rem; }
     h2 { font-size: 1.6rem; }
-    p { font-size: 1.15rem; } /* Testo leggermente più piccolo su mobile ma sempre leggibile */
+    p { font-size: 1.15rem; } 
 }
