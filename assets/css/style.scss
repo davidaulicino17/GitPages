@@ -1,0 +1,52 @@
+---
+---
+
+/* Importiamo il tema Slate esplicitamente per evitare errori di build */
+@import "jekyll-theme-slate";
+
+/* =========================================
+   STILI PERSONALIZZATI (Cards & Griglia)
+   ========================================= */
+
+/* Griglia contenitore responsive */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colonne automatiche */
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+/* Design della singola Card */
+.card {
+  background-color: rgba(255, 255, 255, 0.05); /* Sfondo semi-trasparente */
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.3s ease; /* Transizione fluida */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  height: 100%; /* Altezza uniforme */
+  box-sizing: border-box;
+}
+
+/* Effetto Hover (quando passi col mouse) */
+.card:hover {
+  transform: translateY(-5px); /* Si alza */
+  border-color: #3b9cff; /* Bordo azzurro */
+  background-color: rgba(255, 255, 255, 0.1); /* Diventa più chiara */
+  box-shadow: 0 8px 15px rgba(59, 156, 255, 0.2); /* Alone luminoso */
+}
+
+/* Tipografia interna alle Card */
+.card h3 {
+  margin-top: 0;
+  color: #3b9cff !important; /* Forza il colore del titolo */
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin-bottom: 0;
+  font-size: 0.95em;
+  line-height: 1.5;
+  color: #cfcfcf;
+}
