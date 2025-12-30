@@ -71,8 +71,6 @@ title: Home
 Benvenuto nel mio spazio personale.
 Sono un **Network & Infrastructure Engineer** con base in Italia, appassionato di reti, sicurezza informatica ed elettronica.
 
-Attualmente lavoro presso **NADARA Spa**, gestendo infrastrutture critiche e distribuite (Cisco, Palo Alto, Fortigate).
-
 ---
 
 ### 🏆 Certificazioni
