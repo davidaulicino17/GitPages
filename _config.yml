@@ -1,10 +1,10 @@
 title: "David Aulicino"
 description: "Network & Infrastructure Engineer | Portfolio & Blog"
-theme: jekyll-theme-minimal
+theme: jekyll-theme-slate
 google_analytics:
 show_downloads: false
 
-# Menu di navigazione (opzionale, apparirà in alto o a lato)
+# Menu di navigazione (apparirà in alto)
 header_pages:
  - index.md
 
