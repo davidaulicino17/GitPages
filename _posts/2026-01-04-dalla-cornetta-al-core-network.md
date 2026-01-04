@@ -37,7 +37,7 @@ Lavoravo di giorno e studiavo la sera. La mia evoluzione non è stata un miracol
 
 Con quell'ultimo stipendio mi sono pagato da solo il corso per la certificazione **Cisco CCNA**. Da lì, le porte hanno iniziato ad aprirsi. Sono approdato nella mia amata (anche se ex) **Lan Service Group**, un'azienda piena di belle persone (CEO incluso) che consiglio a chiunque cerchi posizioni aperte.
 
-Lì ho imparato tanto da colleghi straordinari come Max, Ale, Ste, Sergio, Luca, Dome, il "BelloPao" nazionale e molti altri. Mentre lavoravo con loro, ho superato l'esame CCNA, poi la **CCNP** e altre certificazioni.
+Lì ho imparato tanto da colleghi straordinari come Max, Ale, Ste, Sergio, Luca, Dome, il "BelloPao" (che mi ha insegnato i segreti del BGP) nazionale e molti altri. Mentre lavoravo con loro, ho superato l'esame CCNA, poi la **CCNP** e altre certificazioni.
 
 ### Oggi
 
@@ -48,3 +48,5 @@ Oggi la prospettiva è cambiata radicalmente. Non gestisco più l'emergenza del 
 > Le etichette come "Junior" o "Help Desk" sono solo stati transitori. Se hai la fame di imparare e il coraggio di investire su te stesso quando nessuno lo fa per te, la strada dalla "cornetta del telefono" al "Core Network" è molto più breve di quanto sembri.
 >
 > Ed aggiungerei una seconda lezione, ma non meno importante: **MAI SENTIRSI ARRIVATO.**
+
+*David Aulicino*
