@@ -7,8 +7,6 @@ categories: [Carriera, Networking, Storytelling]
 tags: [Network Engineer, Cisco, CCNA, CCNP, Crescita Professionale]
 ---
 
-# Dalla Cornetta al Core Network: Storia di un'Evoluzione Inaspettata
-
 **Di David Aulicino**
 
 A volte, quando guardo gli schemi di rete complessi che ho sviluppato negli anni per le grandi aziende (che mai avrei immaginato) con cui ho lavorato, mi fermo un secondo a riflettere. Vedo collegamenti tra oltre 100 impianti, datacenter interconnessi in protocollo **GENEVE** e firewall di ultima generazione. Ma se chiudo gli occhi per un istante, non sento il ronzio dei server. Sento il telefono squillare.
