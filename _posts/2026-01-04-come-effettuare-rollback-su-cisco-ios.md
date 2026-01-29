@@ -12,7 +12,7 @@ tags: [Network Engineer, Cisco, CCNA, CCNP, Crescita Professionale]
 Spesso e volentieri capita di dover effettuare delle operazioni che potrebbero portare dietro di sé alcune problematiche, alle volte anche bloccanti.
 Soprattutto quando si opera da remoto il rischio di perdere il controllo dell'apparato Cisco è sempre dietro l'angolo.
 
-![Screenshot Cisco]({{ site.baseurl }}/assets/images/rollback_cisco/screenshot_cisco.png)
+![Screenshot Cisco](/GitPages/assets/images/rollback_cisco/screenshot_cisco.png)
 
 ## Il metodo classico (e i suoi limiti)
 
