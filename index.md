@@ -6,10 +6,10 @@ title: Home
 <style>
 /* Stili specifici per la griglia della Home Page */
 .grid-container {
-    /* MODIFICA EFFETTUATA: Ridotto a 200px per rendere le card più piccole e fluide */
     display: grid;
+    /* Card più fluide e spazio aumentato */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    gap: 30px; /* Spazio aumentato tra le card (orizzontale e verticale) */
     margin: 20px 0 40px 0;
 }
 
@@ -23,12 +23,11 @@ title: Home
 
 .card {
     background: #ffffff;
-    /* MODIFICA EFFETTUATA: Padding ridotto a 15px per compattezza */
-    padding: 15px; 
-    border-radius: 8px; /* Bordi leggermente meno arrotondati */
+    padding: 20px; 
+    border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     border: 1px solid #eee;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transizione più fluida */
     height: 100%; 
     display: flex;
     flex-direction: column;
@@ -36,22 +35,22 @@ title: Home
 }
 
 .card-link:hover .card {
-    transform: translateY(-3px); /* Movimento più sottile */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: scale(1.05); /* Effetto ingrandimento al passaggio del mouse */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Ombra più profonda per enfatizzare lo zoom */
 }
 
 .card h3 {
     margin-top: 0;
-    font-size: 1rem; /* Titolo leggermente più piccolo */
+    font-size: 1.1rem;
     color: #0056b3;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .card p {
-    font-size: 0.85rem; /* Testo descrizione più piccolo */
+    font-size: 0.9rem;
     color: #555;
     margin-bottom: 0;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 /* Stile per la lista post */
