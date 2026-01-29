@@ -7,9 +7,9 @@ title: Home
 /* Stili specifici per la griglia della Home Page */
 .grid-container {
     display: grid;
-    /* Card più fluide e spazio aumentato */
+    /* Card fluide con spazio bilanciato */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px; /* Spazio aumentato tra le card (orizzontale e verticale) */
+    gap: 25px; /* Leggermente ridotto per compattezza ma mantiene il respiro */
     margin: 20px 0 40px 0;
 }
 
@@ -18,39 +18,40 @@ title: Home
     text-decoration: none;
     color: inherit;
     display: block;
-    height: 100%;
 }
 
 .card {
     background: #ffffff;
-    padding: 20px; 
+    /* MODIFICA: Padding verticale ridotto per diminuire l'altezza */
+    padding: 12px 18px; 
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     border: 1px solid #eee;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transizione più fluida */
-    height: 100%; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* MODIFICA: Altezza automatica per adattarsi al contenuto senza allungarsi troppo */
+    height: auto; 
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .card-link:hover .card {
-    transform: scale(1.05); /* Effetto ingrandimento al passaggio del mouse */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Ombra più profonda per enfatizzare lo zoom */
+    transform: scale(1.03); /* Zoom leggermente ridotto per evitare sovrapposizioni visive eccessive */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .card h3 {
     margin-top: 0;
-    font-size: 1.1rem;
+    font-size: 1rem; /* Titolo leggermente più piccolo per risparmiare spazio */
     color: #0056b3;
-    margin-bottom: 8px;
+    margin-bottom: 4px; /* Margine ridotto */
 }
 
 .card p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #555;
     margin-bottom: 0;
-    line-height: 1.5;
+    line-height: 1.3; /* Interlinea più densa */
 }
 
 /* Stile per la lista post */
@@ -100,7 +101,7 @@ Sono un **Network & Infrastructure Engineer** con base in Italia, appassionato d
   <a href="https://github.com/davidaulicino17/EXAM-SIMULATOR-PUBLIC" class="card-link" target="_blank">
     <div class="card" style="border-left: 5px solid #3b9cff;">
       <h3>Exam Simulator - Pro Edition v3.0</h3>
-      <p>Un simulatore d'esame desktop moderno e portatile in Python (CustomTkinter). Nessuna installazione, supporto JSON/CSV, Dark Mode e statistiche avanzate.</p>
+      <p>Un simulatore d'esame desktop moderno e portatile in Python (CustomTkinter). Supporto JSON/CSV e statistiche avanzate.</p>
       <br>
       <em>Database supportati: CCNA, CCNP, CCDE.</em>
     </div>
@@ -115,35 +116,35 @@ Sono un **Network & Infrastructure Engineer** con base in Italia, appassionato d
   <a href="https://github.com/davidaulicino17/Laboratory_PNETLAB/tree/main/LAB_%20Design%20OSPF%20Scalabile_Single-Area_vs.%20Multi-Area" class="card-link" target="_blank">
       <div class="card">
         <h3>Design OSPF Scalabile</h3>
-        <p>Analisi comparativa Single-Area vs. Multi-Area e impatto sulla stabilità LSDB.</p>
+        <p>Analisi comparativa Single-Area vs. Multi-Area.</p>
       </div>
   </a>
 
   <a href="https://github.com/davidaulicino17/Laboratory_PNETLAB/tree/main/LAB_L3_Spine-Leaf_Fabric_BGP_and_OSPF" class="card-link" target="_blank">
       <div class="card">
         <h3>Fabric L3 Spine-Leaf</h3>
-        <p>Data Center Fabric con OSPF come underlay e BGP per la distribuzione rotte.</p>
+        <p>Data Center Fabric con OSPF e BGP.</p>
       </div>
   </a>
 
   <a href="https://github.com/davidaulicino17/Laboratory_PNETLAB/tree/main/LAB_Fabric_Datacenter_Greenfield_con_MP-BGP_EVPN" class="card-link" target="_blank">
       <div class="card">
         <h3>Greenfield DC con EVPN</h3>
-        <p>Architettura moderna con MP-BGP EVPN per overlay e control plane.</p>
+        <p>Architettura moderna con MP-BGP EVPN.</p>
       </div>
   </a>
 
   <a href="https://github.com/davidaulicino17/Laboratory_PNETLAB/tree/main/LAB_Nexus_vPC_Domain_Setup_with_LACP" class="card-link" target="_blank">
       <div class="card">
         <h3>Nexus vPC & LACP</h3>
-        <p>Alta affidabilità e aggregazione di banda su switch Cisco Nexus.</p>
+        <p>Alta affidabilità su switch Cisco Nexus.</p>
       </div>
   </a>
 
   <a href="https://github.com/davidaulicino17/Laboratory_PNETLAB/tree/main/LAB_Integrazione_Brownfield-Greenfield_con_DCI_VXLAN" class="card-link" target="_blank">
       <div class="card">
         <h3>DCI con VXLAN Statico</h3>
-        <p>Estensione L2 tra siti (Data Center Interconnect) via tunnel VXLAN.</p>
+        <p>Estensione L2 tra siti via tunnel VXLAN.</p>
       </div>
   </a>
 
