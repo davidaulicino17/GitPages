@@ -11,68 +11,67 @@ tags: [Network Engineer, Cisco, CCNA, CCNP, Crescita Professionale]
 
 **Di David Aulicino**
 
-Spesso e volentieri capita di dover effettuare delle operazioni che potrebbero portare dietro di sé alcune problematiche, alle volte anche **bloccanti**.
-Soprattutto quando si opera da remoto il rischio di **perdere il controllo** dell'apparato Cisco è sempre dietro l'angolo.
+In ambito networking, operare su apparati critici comporta sempre una certa dose di rischio. Un errore di sintassi o una modifica errata a una ACL possono causare problemi **bloccanti** e, se stiamo lavorando da remoto, il rischio di **perdere completamente l'accesso** al device è una minaccia costante.
 
 ![Screenshot Cisco](https://davidaulicino17.github.io/GitPages/assets/images/rollback_cisco/screenshot_cisco.png)
 
-## Il metodo tradizionale (Reload)
+## Il limite del metodo tradizionale (Reload)
 
-Un metodo molto utilizzato per fare un "rollback" è il seguente:
+Molti amministratori di rete si affidano a una procedura di sicurezza standard:
 
-* **Salvare** la configurazione;
-* **Schedulare** un reload dopo *N* minuti;
-* **Effettuare** la configurazione prevista;
+* **Salvataggio** della configurazione attuale (`write memory`);
+* **Pianificazione** di un riavvio automatico (`reload in 10`);
+* **Applicazione** delle modifiche.
 
-Nel caso in cui tutto andasse come sperato ci basterà rimuovere il riavvio pianificato, in caso contrario dovremo aspettare il **reboot** del device.
+Sebbene efficace, questo metodo ha un grande difetto: se qualcosa va storto, l'apparato deve riavviarsi completamente, causando un **down-time** prolungato e non necessario. 
 
-In questo breve articolo voglio spiegare il **metodo vero e proprio** per effettuare un rollback su Cisco, senza dover aspettare più del dovuto per riprendere l'attività in caso di problemi.
+Esiste però una soluzione più elegante e professionale integrata in Cisco IOS: la funzione di **Rollback**.
 
 ---
 
 ## Configurazione della feature "Archive"
 
-Per prima cosa entriamo in **modalità privilegiata** (#) e poi in **configuration mode**:
+Per abilitare il rollback, dobbiamo prima configurare la funzione **Archive**, che permette al sistema di creare snapshot della configurazione.
+
+Entriamo in **modalità privilegiata** (#) e successivamente in **global configuration mode**:
 
 ![Screenshot 1](https://davidaulicino17.github.io/GitPages/assets/images/rollback_cisco/screenshot_1.png)
 
-Il rollback della configurazione avviene attraverso l'attivazione della feature **"archive"**. Per utilizzare questa funzionalità dobbiamo indicare al nostro router/switch dove andare a salvare la configurazione con il comando `path`:
+Dobbiamo specificare al router (o switch) il percorso (`path`) dove memorizzare i file di backup:
 
 ![Screenshot 2](https://davidaulicino17.github.io/GitPages/assets/images/rollback_cisco/screenshot_2.png)
 
-> **Nota:** Tra le opzioni solitamente è presente anche la memoria **flash**, in questo caso non è presente perché sto utilizzando un apparato virtuale.
+> **Nota Tecnica:** In ambienti di produzione è fondamentale utilizzare la memoria **flash:** o un server esterno (TFTP/FTP). In questo esempio, essendo su un apparato virtuale, utilizzeremo il filesystem locale.
 
-Nel mio caso dovrò selezionare come percorso **"unix"** per salvare la configurazione di backup. Dopo aver effettuato la selezione, salviamo e facciamo un test.
-
-**Consiglio:** Nel caso in cui si possa perdere il controllo dell'apparato, è preferibile scegliere come percorso una **memoria interna** al dispositivo per evitare rischi.
+**Best Practice:** Assicurati sempre che il percorso scelto sia accessibile anche in caso di isolamento della rete, preferendo quindi lo storage locale dell'apparato.
 
 ---
 
-## Test della funzione di Rollback (Revert)
+## Esecuzione del Rollback (Revert)
 
-Terminata la configurazione, possiamo testare la funzione di **rollback** o, per essere più precisi, **"revert"**. Entriamo in modalità di configurazione con il comando specifico:
+Una volta configurato l'archivio, possiamo avviare una sessione di configurazione "temporanea" utilizzando il comando `revert`. Questo comando avvia un timer: se non confermiamo le modifiche entro il tempo stabilito, l'apparato **ripristinerà automaticamente** lo stato precedente senza riavviarsi.
 
 ![Screenshot 3](https://davidaulicino17.github.io/GitPages/assets/images/rollback_cisco/screenshot_3.png)
 
-Allo scadere del **timer**, verrà automaticamente ripristinata la configurazione precedente presa dal backup creato in quel momento.
+Al termine del timer, se non interviene l'operatore, il sistema caricherà il file di backup salvato nell'archivio.
 
 ![Screenshot 4](https://davidaulicino17.github.io/GitPages/assets/images/rollback_cisco/screenshot_4.png)
 
-### Esempio Pratico
-Per fare un test possiamo impostare un **hostname differente**, ad esempio:
+### Esempio Pratico: Cambio Hostname
+Immaginiamo di voler testare un cambio di nome host:
 
 ![Screenshot 5](https://davidaulicino17.github.io/GitPages/assets/images/rollback_cisco/screenshot_5.png)
 
-Allo scadere del timer, verrà mostrato a schermo un **log** che indica il cambio di configurazione e i comandi utilizzati per il ripristino:
+Se non confermiamo l'operazione, il sistema genererà un **log** di sistema e applicherà i comandi necessari per tornare alla configurazione originale:
 
 ![Screenshot 6](https://davidaulicino17.github.io/GitPages/assets/images/rollback_cisco/screenshot_6.png)
 
-### Confermare le modifiche
-Nel caso in cui volessimo mantenere le modifiche apportate, possiamo confermarle con il comando:
+### Validazione delle modifiche
+Se le modifiche sono corrette e il servizio risponde come previsto, dobbiamo rendere permanenti i cambiamenti con il comando:
 
 `configure confirm`
 
-A seguito della conferma è **sempre necessario salvare**.
+**Ricorda:** Dopo la conferma, esegui sempre un `copy running-config startup-config` per rendere le modifiche persistenti anche al prossimo riavvio fisico.
 
 ---
 
@@ -82,17 +81,19 @@ A seguito della conferma è **sempre necessario salvare**.
 enable<br>
 configure terminal<br>
 <br>
-! Configurazione dell'archivio<br>
+! 1. Attivazione del sistema di archiviazione<br>
 archive<br>
- path flash:<br>
-end<br>
-write memory<br>
-<br>
-! Avvio configurazione con rollback automatico (1 minuto)<br>
-configure terminal revert timer 1<br>
-hostname PROVA<br>
+ path flash:config-backup<br>
+ write-memory<br>
 end<br>
 <br>
-! Conferma delle modifiche (se corrette)<br>
+! 2. Configurazione con protezione rollback (es. 5 minuti)<br>
+configure terminal revert timer 5<br>
+<br>
+! 3. (Esempio modifica)<br>
+hostname CORE-SWITCH-01<br>
+end<br>
+<br>
+! 4. Conferma definitiva (se tutto ok)<br>
 configure confirm
 </font>
