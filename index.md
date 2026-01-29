@@ -73,7 +73,7 @@ Sono un **Network & Infrastructure Engineer** con base in Italia, appassionato d
 
 ---
 
-### 🏆 Certificazioni
+### 🏆 Certificazioni rilevanti
 <div class="grid-container">
   <div class="card">
     <h3>Cisco CCNP ENARSI</h3>
