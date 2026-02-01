@@ -7,12 +7,19 @@ title: Home
 /* Reset e Sfondo Body */
 body {
     background-color: #0f172a !important;
-    color: #f8fafc !important; /* Testo principale bianco ghiaccio */
+    color: #ffffff !important; /* Testo principale bianco puro */
 }
 
-/* Forzatura colore titoli per visibilità */
-h1, h2, h3, h4, strong {
+/* Forzatura colore titoli e grassetti per massima visibilità */
+h1, h2, h3, h4, strong, b {
     color: #ffffff !important;
+}
+
+/* Classe specifica per la sezione intro per garantire il bianco */
+.intro-text {
+    color: #ffffff !important;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 /* Griglia della Home Page */
@@ -59,7 +66,7 @@ h1, h2, h3, h4, strong {
 
 .card p {
     font-size: 0.9rem;
-    color: #cbd5e1 !important; /* Grigio chiaro per le descrizioni */
+    color: #cbd5e1 !important; /* Grigio chiaro per le descrizioni interne alle card */
     margin-bottom: 0;
     line-height: 1.4;
 }
@@ -79,12 +86,12 @@ h1, h2, h3, h4, strong {
     background: #1e293b;
 }
 .post-list-home a {
-    color: #3b82f6 !important; /* Link del blog blu acceso */
+    color: #3b82f6 !important;
     text-decoration: none;
     font-weight: bold;
 }
 .post-list-home span {
-    color: #94a3b8 !important; /* Date in grigio */
+    color: #94a3b8 !important;
 }
 
 /* Bottoni */
@@ -105,8 +112,10 @@ h1, h2, h3, h4, strong {
 
 # Ciao, sono David Aulicino 👋
 
-Benvenuto nel mio spazio personale.
+<div class="intro-text">
+Benvenuto nel mio spazio personale.  
 Sono un **Network & Infrastructure Engineer** con base in Italia, appassionato di reti, sicurezza informatica ed elettronica.
+</div>
 
 ---
 
