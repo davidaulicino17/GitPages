@@ -4,10 +4,15 @@ title: Home
 ---
 
 <style>
-/* Reset e Sfondo Body (opzionale se non gestito dal tema principale) */
+/* Reset e Sfondo Body */
 body {
-    background-color: #0f172a;
-    color: #e2e8f0;
+    background-color: #0f172a !important;
+    color: #f8fafc !important; /* Testo principale bianco ghiaccio */
+}
+
+/* Forzatura colore titoli per visibilità */
+h1, h2, h3, h4, strong {
+    color: #ffffff !important;
 }
 
 /* Griglia della Home Page */
@@ -25,12 +30,12 @@ body {
     display: block;
 }
 
-/* Card in Dark Mode Moderno */
+/* Card in Dark Mode */
 .card {
     background: #1e293b;
     padding: 18px; 
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     border: 1px solid #334155;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     height: 100%; 
@@ -38,23 +43,23 @@ body {
     flex-direction: column;
 }
 
-/* Hover Effect con Glow */
+/* Hover Effect */
 .card-link:hover .card {
     transform: translateY(-5px);
     border-color: #3b82f6;
-    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
 }
 
 .card h3 {
     margin-top: 0;
     font-size: 1.1rem;
-    color: #3b82f6; /* Blue accent */
+    color: #60a5fa !important; /* Azzurro chiaro per i titoli card */
     margin-bottom: 8px;
 }
 
 .card p {
     font-size: 0.9rem;
-    color: #94a3b8;
+    color: #cbd5e1 !important; /* Grigio chiaro per le descrizioni */
     margin-bottom: 0;
     line-height: 1.4;
 }
@@ -74,24 +79,27 @@ body {
     background: #1e293b;
 }
 .post-list-home a {
-    color: #f8fafc;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-/* Bottoni Moderni */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #3b82f6;
-    color: white !important;
-    border-radius: 6px;
+    color: #3b82f6 !important; /* Link del blog blu acceso */
     text-decoration: none;
     font-weight: bold;
-    transition: opacity 0.2s;
+}
+.post-list-home span {
+    color: #94a3b8 !important; /* Date in grigio */
+}
+
+/* Bottoni */
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background: #3b82f6;
+    color: #ffffff !important;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s;
 }
 .btn:hover {
-    opacity: 0.9;
+    transform: scale(1.05);
 }
 </style>
 
@@ -132,7 +140,7 @@ Sono un **Network & Infrastructure Engineer** con base in Italia, appassionato d
       <h3>Exam Simulator - Pro Edition v3.0</h3>
       <p>Un simulatore d'esame desktop moderno e portatile in Python (CustomTkinter). Supporto JSON/CSV e statistiche avanzate.</p>
       <br>
-      <em style="color: #64748b;">Database supportati: CCNA, CCNP, CCDE.</em>
+      <em style="color: #94a3b8;">Database supportati: CCNA, CCNP, CCDE.</em>
     </div>
   </a>
 </div>
@@ -171,7 +179,7 @@ Sono un **Network & Infrastructure Engineer** con base in Italia, appassionato d
 <ul class="post-list-home">
   {% for post in site.posts %}
     <li>
-      <span style="color: #64748b; font-size: 0.85rem; margin-right: 10px;">{{ post.date | date: "%d/%m/%Y" }}</span>
+      <span>{{ post.date | date: "%d/%m/%Y" }}</span>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </li>
   {% endfor %}
@@ -181,5 +189,5 @@ Sono un **Network & Infrastructure Engineer** con base in Italia, appassionato d
 
 <div style="text-align: center; margin-top: 40px;">
     <a href="https://www.linkedin.com/in/david-aulicino-b9371648" target="_blank" class="btn">LinkedIn</a>
-    <a href="mailto:david.aulicino@tiscali.it" class="btn" style="background: #1e293b; border: 1px solid #334155;">Contattami</a>
+    <a href="mailto:david.aulicino@tiscali.it" class="btn" style="background: #1e293b; border: 1px solid #334155; margin-left: 10px;">Contattami</a>
 </div>
