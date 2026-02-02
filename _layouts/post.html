@@ -2,6 +2,68 @@
 layout: default
 ---
 
+<style>
+/* Reset e Sfondo Body per mantenere la coerenza con la Home */
+body {
+    background-color: #0f172a !important;
+    color: #ffffff !important;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenitore dell'articolo */
+.post-reading {
+    background-color: #0f172a;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Forzatura colore titoli e grassetti */
+h1, h2, h3, h4, strong, b {
+    color: #ffffff !important;
+}
+
+/* Link all'interno del contenuto del post */
+.post-content a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+.post-content a:hover {
+    text-decoration: underline;
+}
+
+/* Meta informazioni (data) */
+.post-meta {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* Stile per i bottoni */
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background: #3b82f6;
+    color: #ffffff !important;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Separatore orizzontale scuro */
+hr {
+    border: 0;
+    border-top: 1px solid #1e293b !important;
+}
+</style>
+
 <article class="post-reading" style="margin-top: 0;">
   
   <header style="margin-bottom: 40px; text-align: center;">
@@ -13,7 +75,7 @@ layout: default
     {{ content }}
   </div>
   
-  <hr style="margin: 60px 0 40px 0; border: 0; border-top: 1px solid #eee;">
+  <hr style="margin: 60px 0 40px 0;">
   
   <div style="text-align: center;">
       <a href="{{ '/' | relative_url }}" class="btn">← Torna alla Home</a>
