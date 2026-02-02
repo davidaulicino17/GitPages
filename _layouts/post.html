@@ -3,52 +3,33 @@ layout: default
 ---
 
 <style>
-/* Reset e Sfondo Body Globale per sovrascrivere il default bianco */
-body, html {
-    background-color: #0f172a !important;
-    color: #ffffff !important;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-}
-
-/* Gestione specifica del contenitore principale se presente nel default layout */
-.wrapper, .container, .site-content {
+/* Forzatura Sfondo e Colori Globali (Come in Home Page) */
+body {
     background-color: #0f172a !important;
     color: #ffffff !important;
 }
 
-/* Contenitore dell'articolo */
-.post-reading {
-    background-color: #0f172a;
-    color: #ffffff;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-/* Forzatura colore titoli e grassetti */
+/* Assicura che i titoli siano bianchi */
 h1, h2, h3, h4, strong, b {
     color: #ffffff !important;
 }
 
-/* Link all'interno del contenuto del post */
-.post-content a {
+/* Link nel testo */
+a {
     color: #3b82f6;
     text-decoration: none;
 }
-
-.post-content a:hover {
+a:hover {
     text-decoration: underline;
 }
 
-/* Meta informazioni (data) */
+/* Meta dati (data pubblicazione) */
 .post-meta {
-    color: #94a3b8;
+    color: #94a3b8 !important;
     font-size: 0.9rem;
 }
 
-/* Stile per i bottoni */
+/* Stile del Bottone "Torna alla Home" coerente con index.md */
 .btn {
     display: inline-block;
     padding: 10px 24px;
@@ -59,19 +40,20 @@ h1, h2, h3, h4, strong, b {
     font-weight: bold;
     transition: transform 0.2s;
 }
-
 .btn:hover {
     transform: scale(1.05);
+    text-decoration: none;
 }
 
-/* Separatore orizzontale scuro */
+/* Linea di separazione scura */
 hr {
     border: 0;
-    border-top: 1px solid #1e293b !important;
+    border-top: 1px solid #334155 !important;
+    margin: 60px 0 40px 0;
 }
 </style>
 
-<article class="post-reading" style="margin-top: 0;">
+<article class="post-reading" style="margin-top: 0; max-width: 800px; margin-left: auto; margin-right: auto; padding: 0 20px;">
   
   <header style="margin-bottom: 40px; text-align: center;">
     <h1>{{ page.title }}</h1>
@@ -82,7 +64,7 @@ hr {
     {{ content }}
   </div>
   
-  <hr style="margin: 60px 0 40px 0;">
+  <hr>
   
   <div style="text-align: center;">
       <a href="{{ '/' | relative_url }}" class="btn">← Torna alla Home</a>
