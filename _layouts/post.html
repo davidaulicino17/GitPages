@@ -3,12 +3,19 @@ layout: default
 ---
 
 <style>
-/* Reset e Sfondo Body per mantenere la coerenza con la Home */
-body {
+/* Reset e Sfondo Body Globale per sovrascrivere il default bianco */
+body, html {
     background-color: #0f172a !important;
     color: #ffffff !important;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+}
+
+/* Gestione specifica del contenitore principale se presente nel default layout */
+.wrapper, .container, .site-content {
+    background-color: #0f172a !important;
+    color: #ffffff !important;
 }
 
 /* Contenitore dell'articolo */
