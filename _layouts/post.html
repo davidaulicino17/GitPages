@@ -3,25 +3,71 @@ layout: default
 ---
 
 <style>
-/* Imposta lo sfondo scuro ai lati e il testo chiaro */
-body { background-color: #0f172a !important; color: #ffffff !important; }
-/* Titolo in blu per garantire leggibilità su qualsiasi sfondo */
-h1 { color: #3b82f6 !important; }
-a { color: #3b82f6 !important; }
+/* 1. SFONDO LATI: Blu scuro come la Home */
+body {
+    background-color: #0f172a !important;
+}
+
+/* 2. FOGLIO ARTICOLO: Bianco con testo NERO */
+.post-reading {
+    background-color: #ffffff !important;
+    color: #000000 !important;       /* Testo nero obbligatorio */
+    max-width: 800px;                /* Larghezza foglio */
+    margin: 20px auto;               /* Centrato con margine */
+    padding: 40px;                   /* Spaziatura interna */
+    border-radius: 8px;              /* Angoli arrotondati */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Ombra per staccare dal fondo */
+}
+
+/* 3. TESTI: Forzo tutto in nero per contrasto sul foglio bianco */
+h1, h2, h3, h4, strong, b {
+    color: #000000 !important;
+}
+
+/* Link: Blu classico ben visibile su bianco */
+a {
+    color: #2563eb !important;
+    text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+/* Data: Grigio scuro */
+.post-meta {
+    color: #4b5563 !important;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Bottone: Blu con testo bianco */
+.btn {
+    background: #2563eb;
+    color: #ffffff !important;
+    padding: 10px 24px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Linea separazione leggera */
+hr {
+    border: 0;
+    border-top: 1px solid #e5e7eb !important;
+    margin: 40px 0;
+}
 </style>
 
-<article class="post-reading" style="margin-top: 0;">
+<article class="post-reading">
   
-  <header style="margin-bottom: 40px; text-align: center;">
-    <h1>{{ page.title }}</h1>
-    <span class="post-meta" style="color: #94a3b8">Pubblicato il {{ page.date | date: "%d/%m/%Y" }}</span>
+  <header style="text-align: center;">
+    <span class="post-meta">Pubblicato il {{ page.date | date: "%d/%m/%Y" }}</span>
   </header>
 
   <div class="post-content">
     {{ content }}
   </div>
   
-  <hr style="margin: 60px 0 40px 0; border: 0; border-top: 1px solid #334155;">
+  <hr>
   
   <div style="text-align: center;">
       <a href="{{ '/' | relative_url }}" class="btn">← Torna alla Home</a>
