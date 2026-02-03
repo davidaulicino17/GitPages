@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Oltre la CLI: Allenare il 'Muscolo della Consulenza' simulando scenari reali"
-date: 2026-02-02
+date: 2026-02-04
 author: "David Aulicino"
 categories: [Carriera, Formazione, AI]
 tags: [Soft Skills, Network Design, Roleplay, Artificial Intelligence, Consulting]

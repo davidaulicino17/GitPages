@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Networking al Confine del Mondo: Perché la SD-WAN è il cuore dell’Eolico"
-date: 2026-02-01
+date: 2026-02-03
 author: "David Aulicino"
 categories: [Networking, SD-WAN, Industrial IT]
 tags: [SD-WAN, Renewables, OT Security, Starlink, Network Engineering]
