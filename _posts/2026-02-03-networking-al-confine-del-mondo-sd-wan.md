@@ -11,6 +11,9 @@ tags: [SD-WAN, Renewables, OT Security, Starlink, Network Engineering]
 
 # Networking al Confine del Mondo: Perché la SD-WAN è il cuore dell’Eolico
 
+![Screenshot Eolico](https://github.com/davidaulicino17/GitPages/blob/main/assets/images/eolico/wind_cover.png)
+
+
 ## 1. Il Miraggio della Banda Ultra-Larga
 Nel mondo della consulenza IT o negli uffici direzionali delle grandi metropoli, diamo la connettività per scontata: fibra dedicata, latenze sotto i 5ms e ridondanza infinita. Sebbene anche in Italia la copertura in fibra (FTTH) sia talvolta ancora un miraggio in diverse zone, la situazione precipita drasticamente quando si lavora per un leader delle rinnovabili, come ho fatto io negli ultimi anni.
 
