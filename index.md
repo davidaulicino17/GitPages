@@ -261,7 +261,7 @@ h1, hr { display: none; }
 </style>
 
 <div class="hero-section">
-    <div class="hero-title">Ciao, sono <span class="text-gradient">David Aulicino</span> 🇮🇹</div>
+    <div class="hero-title">Ciao, sono <span class="text-gradient">David Aulicino</span> </div>
     <div class="hero-subtitle">
         Benvenuto nel mio spazio personale.<br>
         Sono un <strong>Network & Infrastructure Engineer</strong> appassionato di reti, sicurezza informatica ed elettronica.
