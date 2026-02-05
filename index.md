@@ -298,36 +298,74 @@ h1, hr { display: none; }
       </div>
   </div>
 
-  <div class="cert-card border-cisco">
-      <div>
-        <span class="cert-vendor">Cisco - Black Belt</span>
-        <h3 class="cert-name">Switching Deployment</h3>
-      </div>
-      <div class="cert-details">Stage 1, 2, 3</div>
-  </div>
+  <a href="https://cf-ap1.mindtickle.com/1860013409316147822/public-content/1769700949028appoutputcertificate2X3u91ueCB.pngOvq4.webp" target="_blank" style="text-decoration:none;">
+    <div class="cert-card border-cisco">
+        <div>
+            <span class="cert-vendor">Cisco - Black Belt</span>
+            <h3 class="cert-name">Switching Deployment</h3>
+        </div>
+        <div class="cert-details">Stage 3</div>
+    </div>
+  </a>
 
-  <div class="cert-card border-cisco">
-      <div>
-        <span class="cert-vendor">Cisco - Black Belt</span>
-        <h3 class="cert-name">Meraki Deployment</h3>
-      </div>
-      <div class="cert-details">Stage 1, 2</div>
-  </div>
+  <a href="https://cf-ap1.mindtickle.com/1860013409316147822/public-content/1769595312236appoutputcertificateKtD2bF2dno.pngFJqd.webp" target="_blank" style="text-decoration:none;">
+    <div class="cert-card border-cisco">
+        <div>
+            <span class="cert-vendor">Cisco - Black Belt</span>
+            <h3 class="cert-name">Switching Deployment</h3>
+        </div>
+        <div class="cert-details">Stage 2 (Oct 2025)</div>
+    </div>
+  </a>
 
-  <div class="cert-card border-cisco">
-      <div>
-        <span class="cert-vendor">Cisco - Black Belt</span>
-        <h3 class="cert-name">Wireless Deployment</h3>
-      </div>
-      <div class="cert-details">Stage 1 (Apr 2025)</div>
-  </div>
+  <a href="https://cf-ap1.mindtickle.com/1860013409316147822/public-content/1769512597041appoutputcertificateXLtiuki9cq.pngJ4W1.webp" target="_blank" style="text-decoration:none;">
+    <div class="cert-card border-cisco">
+        <div>
+            <span class="cert-vendor">Cisco - Black Belt</span>
+            <h3 class="cert-name">Switching Deployment</h3>
+        </div>
+        <div class="cert-details">Stage 1 (Oct 2025)</div>
+    </div>
+  </a>
 
-  <div class="cert-card border-fortinet">
-      <div>
-        <span class="cert-vendor">Fortinet</span>
-        <h3 class="cert-name">Certified Fundamentals Cybersecurity</h3>
-      </div>
-  </div>
+  <a href="https://cf-ap1.mindtickle.com/1860013409316147822/public-content/1770030052660appoutputcertificatesGTVqYhVeT.png35bY.webp" target="_blank" style="text-decoration:none;">
+    <div class="cert-card border-cisco">
+        <div>
+            <span class="cert-vendor">Cisco - Black Belt</span>
+            <h3 class="cert-name">Meraki Deployment</h3>
+        </div>
+        <div class="cert-details">Stage 2</div>
+    </div>
+  </a>
+
+  <a href="https://cf-ap1.mindtickle.com/1860013409316147822/public-content/1769758486348appoutputcertificatefuMECnmMDJ.pngEDSJ.webp" target="_blank" style="text-decoration:none;">
+    <div class="cert-card border-cisco">
+        <div>
+            <span class="cert-vendor">Cisco - Black Belt</span>
+            <h3 class="cert-name">Meraki Deployment</h3>
+        </div>
+        <div class="cert-details">Stage 1</div>
+    </div>
+  </a>
+
+  <a href="https://cf-ap1.mindtickle.com/1860013409316147822/public-content/1769773246289appoutputcertificateu4lHJabhfD.pngy9mY.webp" target="_blank" style="text-decoration:none;">
+    <div class="cert-card border-cisco">
+        <div>
+            <span class="cert-vendor">Cisco - Black Belt</span>
+            <h3 class="cert-name">Wireless Deployment</h3>
+        </div>
+        <div class="cert-details">Stage 1 (Apr 2025)</div>
+    </div>
+  </a>
+
+  <a href="https://www.credly.com/badges/3abf2768-19ef-4636-9301-cc2e520e90e2/linked_in_profile" target="_blank" style="text-decoration:none;">
+    <div class="cert-card border-fortinet">
+        <div>
+            <span class="cert-vendor">Fortinet</span>
+            <h3 class="cert-name">Certified Fundamentals Cybersecurity</h3>
+        </div>
+    </div>
+  </a>
 
   <div class="cert-card border-sophos">
       <div>
@@ -352,34 +390,42 @@ h1, hr { display: none; }
       <div class="cert-details">Engineer</div>
   </div>
 
-  <div class="cert-card border-yeastar">
-      <div>
-        <span class="cert-vendor">Yeastar</span>
-        <h3 class="cert-name">YSCRS - Routing Specialist</h3>
-      </div>
-  </div>
+  <a href="http://www.yeastar.com/yeastar-academy-certification-verification/" target="_blank" style="text-decoration:none;">
+    <div class="cert-card border-yeastar">
+        <div>
+            <span class="cert-vendor">Yeastar</span>
+            <h3 class="cert-name">YSCRS - Routing Specialist</h3>
+        </div>
+    </div>
+  </a>
 
-  <div class="cert-card border-yeastar">
-      <div>
-        <span class="cert-vendor">Yeastar</span>
-        <h3 class="cert-name">YSCIS - Integration Specialist</h3>
-      </div>
-  </div>
+  <a href="http://www.yeastar.com/yeastar-academy-certification-verification/" target="_blank" style="text-decoration:none;">
+    <div class="cert-card border-yeastar">
+        <div>
+            <span class="cert-vendor">Yeastar</span>
+            <h3 class="cert-name">YSCIS - Integration Specialist</h3>
+        </div>
+    </div>
+  </a>
 
-  <div class="cert-card border-yeastar">
-      <div>
-        <span class="cert-vendor">Yeastar</span>
-        <h3 class="cert-name">YSCT - Certified Technician</h3>
-      </div>
-  </div>
+  <a href="https://www.yeastar.com/academy/certification-verification/" target="_blank" style="text-decoration:none;">
+    <div class="cert-card border-yeastar">
+        <div>
+            <span class="cert-vendor">Yeastar</span>
+            <h3 class="cert-name">YSCT - Certified Technician</h3>
+        </div>
+    </div>
+  </a>
 
-  <div class="cert-card border-arduino">
-      <div>
-        <span class="cert-vendor">Arduino</span>
-        <h3 class="cert-name">Arduino Certification</h3>
-      </div>
-      <div class="cert-details">Electronics & Physical Computing</div>
-  </div>
+  <a href="https://certifications.arduino.cc/results/3263d59c-40ae-460d-b075-7219f36d0cae" target="_blank" style="text-decoration:none;">
+    <div class="cert-card border-arduino">
+        <div>
+            <span class="cert-vendor">Arduino</span>
+            <h3 class="cert-name">Arduino Certification</h3>
+        </div>
+        <div class="cert-details">Electronics & Physical Computing</div>
+    </div>
+  </a>
 
   <div class="cert-card border-3cx">
       <div>
@@ -388,12 +434,14 @@ h1, hr { display: none; }
       </div>
   </div>
 
-  <div class="cert-card border-isc2">
-      <div>
-        <span class="cert-vendor">ISC2</span>
-        <h3 class="cert-name">ISC2 Candidate</h3>
-      </div>
-  </div>
+  <a href="https://www.credly.com/badges/00cc0f60-3a18-4838-8208-af4677c58893/linked_in_profile" target="_blank" style="text-decoration:none;">
+    <div class="cert-card border-isc2">
+        <div>
+            <span class="cert-vendor">ISC2</span>
+            <h3 class="cert-name">ISC2 Candidate</h3>
+        </div>
+    </div>
+  </a>
 
 </div>
 
