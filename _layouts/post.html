@@ -30,13 +30,19 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
 }
 
-h1 {
+/* Stile del titolo principale generato dal Layout */
+header h1 {
     font-size: 2.25rem;
     margin-top: 0;
     text-align: center;
 }
 
-/* 4. TESTO E PARAGRAFI */
+/* 4. CORREZIONE DUPLICATI: Nasconde H1 dentro il contenuto del post */
+.post-content h1 {
+    display: none;
+}
+
+/* 5. TESTO E PARAGRAFI */
 p {
     font-size: 1.125rem;             /* 18px circa, ottimo per blog */
     line-height: 1.8;                /* Interlinea ariosa */
@@ -48,7 +54,7 @@ strong, b {
     font-weight: 600;
 }
 
-/* 5. LINK */
+/* 6. LINK */
 a {
     color: #2563eb !important;
     text-decoration: none;
@@ -61,7 +67,7 @@ a:hover {
     text-decoration: none;
 }
 
-/* 6. META DATA (Data) */
+/* 7. META DATA (Data) */
 .post-meta {
     color: #64748b !important;       /* Grigio medio (Slate 500) */
     font-size: 0.95rem;
@@ -73,7 +79,7 @@ a:hover {
     font-weight: 600;
 }
 
-/* 7. IMMAGINI (Responsive e moderne) */
+/* 8. IMMAGINI (Responsive e moderne) */
 .post-content img {
     max-width: 100%;
     height: auto;
@@ -82,7 +88,7 @@ a:hover {
     margin: 20px 0;
 }
 
-/* 8. CITAZIONI (Blockquote) */
+/* 9. CITAZIONI (Blockquote) */
 blockquote {
     border-left: 4px solid #2563eb;
     background: #f8fafc;
@@ -93,7 +99,7 @@ blockquote {
     border-radius: 0 8px 8px 0;
 }
 
-/* 9. BOTTONE */
+/* 10. BOTTONE */
 .btn {
     background-color: #2563eb;
     color: #ffffff !important;
@@ -112,7 +118,7 @@ blockquote {
     border-bottom: none;             /* Rimuove l'effetto link standard */
 }
 
-/* 10. DIVISORE */
+/* 11. DIVISORE */
 hr {
     border: 0;
     height: 1px;
@@ -120,7 +126,7 @@ hr {
     margin: 50px 0;
 }
 
-/* CODICE (Snippet opzionale se usi markdown code blocks) */
+/* CODICE */
 pre, code {
     font-family: "Menlo", "Monaco", "Courier New", monospace;
     font-size: 0.9em;
