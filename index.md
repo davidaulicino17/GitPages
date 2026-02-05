@@ -8,10 +8,10 @@ title: Home
 body {
     background-color: #0f172a !important; /* Slate 900 */
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    color: #e2e8f0; /* Slate 200 - non bianco puro, stanca meno gli occhi */
+    color: #e2e8f0; /* Slate 200 */
 }
 
-/* 2. HERO SECTION (Intestazione) */
+/* 2. HERO SECTION */
 .hero-section {
     text-align: center;
     padding: 60px 20px 40px 20px;
@@ -27,7 +27,6 @@ body {
     line-height: 1.1;
 }
 
-/* Effetto gradiente sul nome */
 .text-gradient {
     background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
     -webkit-background-clip: text;
@@ -51,10 +50,9 @@ body {
     margin-bottom: 30px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
-/* Linea decorativa accanto ai titoli */
 .section-title::after {
     content: "";
     flex: 1;
@@ -63,19 +61,19 @@ body {
     margin-left: 15px;
 }
 
-/* 4. GRIGLIA CARDS */
+/* 4. GRIGLIA GENERICA (Usata per Labs e Software) */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 24px;
 }
 
-/* 5. CARD DESIGN */
+/* 5. CARD DESIGN BASE */
 .card {
     background: #1e293b; /* Slate 800 */
     padding: 24px; 
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.05); /* Bordo sottilissimo */
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
     height: 100%; 
     display: flex;
     flex-direction: column;
@@ -90,35 +88,97 @@ body {
     height: 100%;
 }
 
-/* Hover Effect: Sale leggermente e si illumina il bordo */
 .card-link:hover .card, .card:hover {
-    transform: translateY(-5px);
-    border-color: #3b82f6; /* Blue 500 */
-    box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.3);
+    transform: translateY(-4px);
+    border-color: #3b82f6;
+    box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.2);
 }
 
 .card h3 {
     margin-top: 0;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-weight: 600;
     color: #ffffff !important;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .card p {
     font-size: 0.95rem;
-    color: #cbd5e1 !important; /* Slate 300 */
+    color: #cbd5e1 !important;
     margin-bottom: 0;
     line-height: 1.5;
 }
 
+/* 6. NUOVO STILE CERTIFICAZIONI (Lista Verticale) */
+.cert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cert-card {
+    background: linear-gradient(to right, #1e293b, #0f172a);
+    padding: 18px 24px;
+    border-radius: 10px;
+    border: 1px solid #334155;
+    border-left-width: 5px; /* Bordo colorato a sinistra */
+    display: flex;
+    flex-direction: column; /* Mobile first */
+    transition: transform 0.2s ease;
+}
+
+.cert-card:hover {
+    transform: translateX(5px);
+    background: #1e293b;
+}
+
+/* Desktop: Layout orizzontale per le cert */
+@media (min-width: 600px) {
+    .cert-card {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.cert-vendor {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #94a3b8;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.cert-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+}
+
+.cert-details {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+}
+
+/* Colori specifici per Vendor (Bordo sinistro) */
+.border-cisco { border-left-color: #2563eb; }    /* Blue */
+.border-fortinet { border-left-color: #ef4444; } /* Red */
+.border-sophos { border-left-color: #3b82f6; }   /* Blue Light */
+.border-arduino { border-left-color: #0d9488; }  /* Teal */
+.border-yeastar { border-left-color: #f97316; }  /* Orange */
+.border-isc2 { border-left-color: #10b981; }     /* Green */
+.border-3cx { border-left-color: #0ea5e9; }      /* Sky Blue */
+
 /* Card Speciale (Software) */
 .card-featured {
-    border-left: 4px solid #3b82f6;
+    border-left: 5px solid #3b82f6;
     background: linear-gradient(to right, #1e293b, #0f172a);
 }
 
-/* 6. LISTA ARTICOLI BLOG */
+/* 7. LISTA ARTICOLI BLOG */
 .post-list-modern {
     list-style: none;
     padding: 0;
@@ -126,7 +186,7 @@ body {
 
 .post-item {
     display: flex;
-    align-items: center; /* Allinea verticalmente data e titolo */
+    align-items: center;
     justify-content: space-between;
     padding: 16px;
     border-bottom: 1px solid #334155;
@@ -143,7 +203,7 @@ body {
     font-size: 0.85rem;
     color: #64748b;
     font-family: monospace;
-    min-width: 100px; /* Allinea i titoli */
+    min-width: 100px;
 }
 
 .post-link {
@@ -158,7 +218,7 @@ body {
     text-decoration: underline;
 }
 
-/* 7. BOTTONI (Pillole) */
+/* 8. BOTTONI */
 .btn-group {
     margin-top: 60px;
     text-align: center;
@@ -201,47 +261,156 @@ h1, hr { display: none; }
 </style>
 
 <div class="hero-section">
-    <div class="hero-title">Ciao, sono <span class="text-gradient">David Aulicino</span> 窓</div>
+    <div class="hero-title">Ciao, sono <span class="text-gradient">David Aulicino</span> 🇮🇹</div>
     <div class="hero-subtitle">
         Benvenuto nel mio spazio personale.<br>
         Sono un <strong>Network & Infrastructure Engineer</strong> appassionato di reti, sicurezza informatica ed elettronica.
     </div>
 </div>
 
-<h2 class="section-title">醇 Certificazioni</h2>
-<div class="grid-container">
-  <div class="card">
-    <h3>Cisco CCNP ENARSI</h3>
-    <p>300-410 Enterprise Advanced Routing</p>
+<h2 class="section-title">🏅 Certificazioni</h2>
+<div class="cert-list">
+
+  <a href="https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/professional/ccnp-enterprise.html" target="_blank" style="text-decoration:none;">
+    <div class="cert-card border-cisco">
+      <div>
+        <span class="cert-vendor">Cisco</span>
+        <h3 class="cert-name">CCNP ENARSI 300-410</h3>
+      </div>
+      <div class="cert-details">Enterprise Advanced Routing</div>
+    </div>
+  </a>
+
+  <a href="https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html" target="_blank" style="text-decoration:none;">
+    <div class="cert-card border-cisco">
+      <div>
+        <span class="cert-vendor">Cisco</span>
+        <h3 class="cert-name">CCNA 200-301</h3>
+      </div>
+      <div class="cert-details">Network Associate</div>
+    </div>
+  </a>
+
+  <div class="cert-card border-cisco">
+      <div>
+        <span class="cert-vendor">Cisco</span>
+        <h3 class="cert-name">OCSE 500-560</h3>
+      </div>
   </div>
-  <div class="card">
-    <h3>Cisco CCNA</h3>
-    <p>200-301 Network Associate</p>
+
+  <div class="cert-card border-cisco">
+      <div>
+        <span class="cert-vendor">Cisco - Black Belt</span>
+        <h3 class="cert-name">Switching Deployment</h3>
+      </div>
+      <div class="cert-details">Stage 1, 2, 3</div>
   </div>
-  <div class="card">
-    <h3>Sophos Certified</h3>
-    <p>XG Firewall & Central Engineer</p>
+
+  <div class="cert-card border-cisco">
+      <div>
+        <span class="cert-vendor">Cisco - Black Belt</span>
+        <h3 class="cert-name">Meraki Deployment</h3>
+      </div>
+      <div class="cert-details">Stage 1, 2</div>
   </div>
-  <div class="card">
-    <h3>Arduino Certification</h3>
-    <p>Electronics & Physical Computing</p>
+
+  <div class="cert-card border-cisco">
+      <div>
+        <span class="cert-vendor">Cisco - Black Belt</span>
+        <h3 class="cert-name">Wireless Deployment</h3>
+      </div>
+      <div class="cert-details">Stage 1 (Apr 2025)</div>
   </div>
+
+  <div class="cert-card border-fortinet">
+      <div>
+        <span class="cert-vendor">Fortinet</span>
+        <h3 class="cert-name">Certified Fundamentals Cybersecurity</h3>
+      </div>
+  </div>
+
+  <div class="cert-card border-sophos">
+      <div>
+        <span class="cert-vendor">Sophos</span>
+        <h3 class="cert-name">Sophos Certified Engineer</h3>
+      </div>
+  </div>
+
+  <div class="cert-card border-sophos">
+      <div>
+        <span class="cert-vendor">Sophos</span>
+        <h3 class="cert-name">ET80 - XG Firewall v18.0</h3>
+      </div>
+      <div class="cert-details">Engineer</div>
+  </div>
+
+  <div class="cert-card border-sophos">
+      <div>
+        <span class="cert-vendor">Sophos</span>
+        <h3 class="cert-name">ET01 - Central Overview</h3>
+      </div>
+      <div class="cert-details">Engineer</div>
+  </div>
+
+  <div class="cert-card border-yeastar">
+      <div>
+        <span class="cert-vendor">Yeastar</span>
+        <h3 class="cert-name">YSCRS - Routing Specialist</h3>
+      </div>
+  </div>
+
+  <div class="cert-card border-yeastar">
+      <div>
+        <span class="cert-vendor">Yeastar</span>
+        <h3 class="cert-name">YSCIS - Integration Specialist</h3>
+      </div>
+  </div>
+
+  <div class="cert-card border-yeastar">
+      <div>
+        <span class="cert-vendor">Yeastar</span>
+        <h3 class="cert-name">YSCT - Certified Technician</h3>
+      </div>
+  </div>
+
+  <div class="cert-card border-arduino">
+      <div>
+        <span class="cert-vendor">Arduino</span>
+        <h3 class="cert-name">Arduino Certification</h3>
+      </div>
+      <div class="cert-details">Electronics & Physical Computing</div>
+  </div>
+
+  <div class="cert-card border-3cx">
+      <div>
+        <span class="cert-vendor">3CX</span>
+        <h3 class="cert-name">Basic Certified Engineer v16</h3>
+      </div>
+  </div>
+
+  <div class="cert-card border-isc2">
+      <div>
+        <span class="cert-vendor">ISC2</span>
+        <h3 class="cert-name">ISC2 Candidate</h3>
+      </div>
+  </div>
+
 </div>
 
-<h2 class="section-title">捗 Software & Tools</h2>
+<h2 class="section-title">💻 Software & Tools</h2>
 <div class="grid-container" style="grid-template-columns: 1fr;"> 
   <a href="https://github.com/davidaulicino17/EXAM-SIMULATOR-PUBLIC" class="card-link" target="_blank">
     <div class="card card-featured">
       <h3>Exam Simulator - Pro Edition v3.0</h3>
       <p>Simulatore d'esame desktop moderno in Python (CustomTkinter). Supporto JSON/CSV e statistiche avanzate.</p>
       <div style="margin-top: 10px; font-size: 0.85rem; color: #94a3b8;">
-        認 Database: CCNA, CCNP, CCDE
+        📂 Database: CCNA, CCNP, CCDE
       </div>
     </div>
   </a>
 </div>
 
-<h2 class="section-title">溌 Laboratori PNetLab</h2>
+<h2 class="section-title">🧪 Laboratori PNetLab</h2>
 <div class="grid-container">
 
   <a href="https://github.com/davidaulicino17/Laboratory_PNETLAB/tree/main/LAB_%20Design%20OSPF%20Scalabile_Single-Area_vs.%20Multi-Area" class="card-link" target="_blank">
@@ -267,7 +436,7 @@ h1, hr { display: none; }
 
 </div>
 
-<h2 class="section-title">統 Ultimi Articoli</h2>
+<h2 class="section-title">📝 Ultimi Articoli</h2>
 <ul class="post-list-modern">
   {% for post in site.posts limit:5 %}
     <li class="post-item">
