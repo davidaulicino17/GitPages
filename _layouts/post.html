@@ -3,64 +3,138 @@ layout: default
 ---
 
 <style>
-/* 1. SFONDO LATI: Blu scuro come la Home */
+/* 1. SFONDO E FONT GLOBALI */
 body {
-    background-color: #0f172a !important;
+    background-color: #0f172a !important; /* Blu scuro (Slate 900) */
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* 2. FOGLIO ARTICOLO: Bianco con testo NERO */
+/* 2. FOGLIO ARTICOLO */
 .post-reading {
     background-color: #ffffff !important;
-    color: #000000 !important;       /* Testo nero obbligatorio */
-    max-width: 800px;                /* Larghezza foglio */
-    margin: 20px auto;               /* Centrato con margine */
-    padding: 40px;                   /* Spaziatura interna */
-    border-radius: 8px;              /* Angoli arrotondati */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Ombra per staccare dal fondo */
+    color: #334155 !important;       /* Grigio scuro (Slate 700) per il testo corpo - meno stancante del nero */
+    max-width: 760px;                /* Leggermente più stretto per favorire la lettura */
+    margin: 40px auto;               /* Più aria sopra e sotto */
+    padding: 60px 40px;              /* Più spaziatura interna verticale */
+    border-radius: 12px;             /* Arrotondamento più moderno */
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* Ombra morbida e diffusa */
 }
 
-/* 3. TESTI: Forzo tutto in nero per contrasto sul foglio bianco */
-h1, h2, h3, h4, strong, b {
-    color: #000000 !important;
+/* 3. TITOLI */
+h1, h2, h3, h4, h5, h6 {
+    color: #0f172a !important;       /* Titoli quasi neri per contrasto */
+    font-weight: 700;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
 }
 
-/* Link: Blu classico ben visibile su bianco */
+h1 {
+    font-size: 2.25rem;
+    margin-top: 0;
+    text-align: center;
+}
+
+/* 4. TESTO E PARAGRAFI */
+p {
+    font-size: 1.125rem;             /* 18px circa, ottimo per blog */
+    line-height: 1.8;                /* Interlinea ariosa */
+    margin-bottom: 1.5em;
+}
+
+strong, b {
+    color: #0f172a !important;
+    font-weight: 600;
+}
+
+/* 5. LINK */
 a {
     color: #2563eb !important;
     text-decoration: none;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
 }
-a:hover { text-decoration: underline; }
+a:hover {
+    border-bottom-color: #2563eb;
+    text-decoration: none;
+}
 
-/* Data: Grigio scuro */
+/* 6. META DATA (Data) */
 .post-meta {
-    color: #4b5563 !important;
-    font-size: 0.9rem;
+    color: #64748b !important;       /* Grigio medio (Slate 500) */
+    font-size: 0.95rem;
     display: block;
-    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
 }
 
-/* Bottone: Blu con testo bianco */
-.btn {
-    background: #2563eb;
-    color: #ffffff !important;
-    padding: 10px 24px;
+/* 7. IMMAGINI (Responsive e moderne) */
+.post-content img {
+    max-width: 100%;
+    height: auto;
     border-radius: 8px;
-    display: inline-block;
-    margin-top: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
 }
 
-/* Linea separazione leggera */
+/* 8. CITAZIONI (Blockquote) */
+blockquote {
+    border-left: 4px solid #2563eb;
+    background: #f8fafc;
+    margin: 2em 0;
+    padding: 1em 1.5em;
+    font-style: italic;
+    color: #475569;
+    border-radius: 0 8px 8px 0;
+}
+
+/* 9. BOTTONE */
+.btn {
+    background-color: #2563eb;
+    color: #ffffff !important;
+    padding: 12px 28px;
+    border-radius: 50px;             /* Pillola */
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+    border-bottom: none;             /* Rimuove l'effetto link standard */
+}
+
+/* 10. DIVISORE */
 hr {
     border: 0;
-    border-top: 1px solid #e5e7eb !important;
-    margin: 40px 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+    margin: 50px 0;
+}
+
+/* CODICE (Snippet opzionale se usi markdown code blocks) */
+pre, code {
+    font-family: "Menlo", "Monaco", "Courier New", monospace;
+    font-size: 0.9em;
+    background-color: #f1f5f9;
+    border-radius: 4px;
 }
 </style>
 
 <article class="post-reading">
   
-  <header style="text-align: center;">
-    <span class="post-meta">Pubblicato il {{ page.date | date: "%d/%m/%Y" }}</span>
+  <header>
+    <span class="post-meta">{{ page.date | date: "%d/%m/%Y" }}</span>
+    
+    <h1>{{ page.title }}</h1>
   </header>
 
   <div class="post-content">
