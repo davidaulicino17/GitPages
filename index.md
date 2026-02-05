@@ -291,12 +291,14 @@ h1, hr { display: none; }
     </div>
   </a>
 
-  <div class="cert-card border-cisco">
-      <div>
-        <span class="cert-vendor">Cisco</span>
-        <h3 class="cert-name">OCSE 500-560</h3>
-      </div>
-  </div>
+  <a href="https://wsr.pearsonvue.com/testtaker/authenticate/AuthenticateScoreReport.htm" target="_blank" style="text-decoration:none;">
+    <div class="cert-card border-cisco">
+        <div>
+            <span class="cert-vendor">Cisco</span>
+            <h3 class="cert-name">OCSE 500-560</h3>
+        </div>
+    </div>
+  </a>
 
   <a href="https://cf-ap1.mindtickle.com/1860013409316147822/public-content/1769700949028appoutputcertificate2X3u91ueCB.pngOvq4.webp" target="_blank" style="text-decoration:none;">
     <div class="cert-card border-cisco">
