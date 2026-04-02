@@ -1,13 +1,30 @@
 title: "David Aulicino"
 description: "Network & Infrastructure Engineer | Portfolio & Blog"
-theme: jekyll-theme-slate
-google_analytics:
+url: "https://davidaulicino17.github.io"
+baseurl: "/GitPages"
+
+# NON usare theme jekyll-theme-slate — usiamo layout custom
+# theme: jekyll-theme-slate
+
 show_downloads: false
 
-# Menu di navigazione (apparirà in alto)
+# Navigazione
 header_pages:
- - index.md
+  - index.md
 
 # Impostazioni Markdown
 markdown: kramdown
 highlighter: rouge
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Permalink per i post
+permalink: /:year/:month/:day/:title/
+
+# Esclusioni
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
