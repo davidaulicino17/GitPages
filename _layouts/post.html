@@ -2,155 +2,90 @@
 layout: default
 ---
 
-<style>
-/* 1. SFONDO E FONT GLOBALI */
-body {
-    background-color: #0f172a !important; /* Blu scuro (Slate 900) */
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-}
+<div class="page-content">
 
-/* 2. FOGLIO ARTICOLO */
-.post-reading {
-    background-color: #ffffff !important;
-    color: #334155 !important;       /* Grigio scuro (Slate 700) per il testo corpo - meno stancante del nero */
-    max-width: 760px;                /* Leggermente più stretto per favorire la lettura */
-    margin: 40px auto;               /* Più aria sopra e sotto */
-    padding: 60px 40px;              /* Più spaziatura interna verticale */
-    border-radius: 12px;             /* Arrotondamento più moderno */
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* Ombra morbida e diffusa */
-}
+    <a href="{{ '/' | relative_url }}" class="back-link">← Tutti gli articoli</a>
 
-/* 3. TITOLI */
-h1, h2, h3, h4, h5, h6 {
-    color: #0f172a !important;       /* Titoli quasi neri per contrasto */
-    font-weight: 700;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-    line-height: 1.2;
-}
+    <div class="post-layout">
 
-/* Stile del titolo principale generato dal Layout */
-header h1 {
-    font-size: 2.25rem;
-    margin-top: 0;
-    text-align: center;
-}
+        <!-- ARTICOLO PRINCIPALE -->
+        <div>
+            <article class="post-container">
 
-/* 4. CORREZIONE DUPLICATI: Nasconde H1 dentro il contenuto del post */
-.post-content h1 {
-    display: none;
-}
+                {% if page.cover_image %}
+                <div class="post-cover">
+                    <img src="{{ page.cover_image | relative_url }}" alt="{{ page.title }}">
+                </div>
+                {% endif %}
 
-/* 5. TESTO E PARAGRAFI */
-p {
-    font-size: 1.125rem;             /* 18px circa, ottimo per blog */
-    line-height: 1.8;                /* Interlinea ariosa */
-    margin-bottom: 1.5em;
-}
+                <div class="post-header">
+                    {% if page.categories %}
+                    <span class="post-cat">{{ page.categories | join: " · " }}</span>
+                    {% endif %}
 
-strong, b {
-    color: #0f172a !important;
-    font-weight: 600;
-}
+                    <h1 class="post-title">{{ page.title }}</h1>
 
-/* 6. LINK */
-a {
-    color: #2563eb !important;
-    text-decoration: none;
-    font-weight: 500;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.2s;
-}
-a:hover {
-    border-bottom-color: #2563eb;
-    text-decoration: none;
-}
+                    <div class="post-byline">
+                        <div class="byline-avatar">DA</div>
+                        <div>
+                            <span class="byline-name">David Aulicino</span>
+                            <span class="byline-meta">{{ page.date | date: "%d %B %Y" }}</span>
+                        </div>
+                    </div>
+                </div>
 
-/* 7. META DATA (Data) */
-.post-meta {
-    color: #64748b !important;       /* Grigio medio (Slate 500) */
-    font-size: 0.95rem;
-    display: block;
-    text-align: center;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
-}
+                <div class="post-body">
+                    {{ content }}
+                </div>
 
-/* 8. IMMAGINI (Responsive e moderne) */
-.post-content img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
-}
+                <div class="post-footer">
+                    <div class="tags">
+                        {% for tag in page.tags %}
+                        <span class="tag">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                    <a href="{{ '/' | relative_url }}" class="btn-back">← Torna alla Home</a>
+                </div>
 
-/* 9. CITAZIONI (Blockquote) */
-blockquote {
-    border-left: 4px solid #2563eb;
-    background: #f8fafc;
-    margin: 2em 0;
-    padding: 1em 1.5em;
-    font-style: italic;
-    color: #475569;
-    border-radius: 0 8px 8px 0;
-}
+            </article>
+        </div>
 
-/* 10. BOTTONE */
-.btn {
-    background-color: #2563eb;
-    color: #ffffff !important;
-    padding: 12px 28px;
-    border-radius: 50px;             /* Pillola */
-    font-weight: 600;
-    font-size: 1rem;
-    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
-}
+        <!-- SIDEBAR -->
+        <div>
 
-.btn:hover {
-    background-color: #1d4ed8;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
-    border-bottom: none;             /* Rimuove l'effetto link standard */
-}
+            <!-- CARD AUTORE -->
+            <div class="sidebar-card">
+                <h3>L'autore</h3>
+                <div class="author-card">
+                    <div class="author-avatar">DA</div>
+                    <div>
+                        <p class="author-name">David Aulicino</p>
+                        <p class="author-bio">Senior Network Engineer. CCNP, CCNA. Infrastrutture critiche, SD-WAN e sicurezza perimetrale.</p>
+                    </div>
+                    <div class="author-links">
+                        <a class="author-link" href="https://www.linkedin.com/in/david-aulicino-b9371648" target="_blank" rel="noopener">LinkedIn</a>
+                        <a class="author-link" href="https://github.com/davidaulicino17" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
+            </div>
 
-/* 11. DIVISORE */
-hr {
-    border: 0;
-    height: 1px;
-    background: linear-gradient(to right, transparent, #e2e8f0, transparent);
-    margin: 50px 0;
-}
+            <!-- ARTICOLI CORRELATI -->
+            <div class="sidebar-card">
+                <h3>Articoli correlati</h3>
+                {% assign related_posts = site.posts | where_exp: "post", "post.url != page.url" | limit: 4 %}
+                {% for post in related_posts %}
+                <div class="related-item">
+                    {% if post.categories %}
+                    <p class="related-cat">{{ post.categories | join: " · " }}</p>
+                    {% endif %}
+                    <a href="{{ post.url | relative_url }}" class="related-title">{{ post.title }}</a>
+                    <p class="related-date">{{ post.date | date: "%d %b %Y" }}</p>
+                </div>
+                {% endfor %}
+            </div>
 
-/* CODICE */
-pre, code {
-    font-family: "Menlo", "Monaco", "Courier New", monospace;
-    font-size: 0.9em;
-    background-color: #f1f5f9;
-    border-radius: 4px;
-}
-</style>
+        </div>
 
-<article class="post-reading">
-  
-  <header>
-    <span class="post-meta">{{ page.date | date: "%d/%m/%Y" }}</span>
-    
-    <h1>{{ page.title }}</h1>
-  </header>
+    </div>
 
-  <div class="post-content">
-    {{ content }}
-  </div>
-  
-  <hr>
-  
-  <div style="text-align: center;">
-      <a href="{{ '/' | relative_url }}" class="btn">← Torna alla Home</a>
-  </div>
-
-</article>
+</div>

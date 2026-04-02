@@ -3,31 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | David Aulicino</title>
+    <title>{% if page.title %}{{ page.title }} | {% endif %}David Aulicino</title>
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 160 }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="site-header">
         <div class="container">
-            <a href="{{ '/' | relative_url }}" class="site-title">David Aulicino</a>
+            <a href="{{ '/' | relative_url }}" class="site-title">David <span>Aulicino</span></a>
             <nav>
                 <a href="{{ '/' | relative_url }}">Home</a>
-                <a href="https://github.com/davidaulicino17" target="_blank">GitHub</a>
+                <a href="https://github.com/davidaulicino17" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/david-aulicino-b9371648" target="_blank" rel="noopener">LinkedIn</a>
             </nav>
         </div>
     </header>
 
-    <main class="page-content">
-        <div class="container">
-            {{ content }}
-        </div>
+    <main>
+        {{ content }}
     </main>
 
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2025 David Aulicino - Network & Infrastructure Engineer</p>
+            <p>&copy; {{ 'now' | date: "%Y" }} David Aulicino — Network &amp; Infrastructure Engineer</p>
         </div>
     </footer>
 
