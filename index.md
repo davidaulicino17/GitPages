@@ -105,6 +105,10 @@ title: "Home"
                 <div class="cert-item tier-other"><div class="cert-dot"></div><div><span class="cert-name">YSCRS — Yeastar Routing Specialist</span><span class="cert-issuer">Yeastar · 2020</span></div></div>
                 <div class="cert-item tier-other"><div class="cert-dot"></div><div><span class="cert-name">YSCT — Yeastar Certified Technician</span><span class="cert-issuer">Yeastar · 2019</span></div></div>
                 <div class="cert-item tier-other"><div class="cert-dot"></div><div><span class="cert-name">3CX Basic Certified Engineer v16</span><span class="cert-issuer">3CX · 2020</span></div></div>
+
+                <p class="cert-tier-label">IA &amp; Vibe Coding</p>
+                <div class="cert-item tier-other"><div class="cert-dot"></div><div><span class="cert-name">Replit Platform Builder</span><span class="cert-issuer">Replit · Level 1 – Beginner Builder · Mar 2026</span></div></div>
+                <div class="cert-item tier-other"><div class="cert-dot"></div><div><span class="cert-name">Vibe Coding 101 with Replit</span><span class="cert-issuer">DeepLearning.AI · Mar 2026</span></div></div>
             </div>
 
         </div>
