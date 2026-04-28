@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Come effettuare rollback su Cisco IOS"
-date: 2026-01-29
+date: 2026-01-04
 author: "David Aulicino"
 categories: [Carriera, Networking, Storytelling]
 tags: [Network Engineer, Cisco, CCNA, CCNP, Crescita Professionale]
@@ -97,3 +97,7 @@ end<br>
 ! 4. Conferma definitiva (se tutto ok)<br>
 configure confirm
 </font>
+
+---
+
+*Vuoi consolidare la teoria con lab pratici? Ho pubblicato un libro di laboratori di networking — **[disponibile su Amazon →](https://www.amazon.it/dp/B0GYD89B5N)***

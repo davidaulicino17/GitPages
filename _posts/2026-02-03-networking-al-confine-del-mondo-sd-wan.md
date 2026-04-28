@@ -51,3 +51,7 @@ L’architettura che ho gestito si basava su una struttura robusta: **due Data C
 In un settore dove l'efficienza è tutto, un ritardo nella ricezione dei dati di produzione può tradursi in perdite economiche o inefficienze nella rete elettrica nazionale. La tecnologia SD-WAN è il ponte che permette a un ingegnere, seduto comodamente in ufficio o in consulenza, di avere il controllo totale su un asset a mille chilometri di distanza, come se fosse nella stanza accanto.
 
 Il networking moderno non riguarda più solo il "collegare cavi", ma il garantire che l'intelligenza dei dati fluisca costante, indipendentemente da quanto sia isolato il sito.
+
+---
+
+*Vuoi consolidare la teoria con lab pratici? Ho pubblicato un libro di laboratori di networking — **[disponibile su Amazon →](https://www.amazon.it/dp/B0GYD89B5N)***

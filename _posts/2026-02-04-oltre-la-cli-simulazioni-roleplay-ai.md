@@ -38,3 +38,7 @@ Come Network Engineer, spesso ci concentriamo solo sul "come" configurare le cos
 Queste simulazioni sono una palestra a costo zero per sbagliare le email, gestire clienti difficili e affinare la sensibilità commerciale, prima di trovarsi davanti a un cliente vero con un contratto in mano.
 
 La CLI è importante, ma saper scrivere una mail che convince un CFO a firmare il budget lo è altrettanto.
+
+---
+
+*Vuoi consolidare la teoria con lab pratici? Ho pubblicato un libro di laboratori di networking — **[disponibile su Amazon →](https://www.amazon.it/dp/B0GYD89B5N)***

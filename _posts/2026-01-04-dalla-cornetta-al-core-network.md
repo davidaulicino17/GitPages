@@ -48,3 +48,7 @@ Oggi la prospettiva è cambiata radicalmente. Non gestisco più l'emergenza del 
 > Ed aggiungerei una seconda lezione, ma non meno importante: **MAI SENTIRSI ARRIVATO.**
 
 *David Aulicino*
+
+---
+
+*Vuoi consolidare la teoria con lab pratici? Ho pubblicato un libro di laboratori di networking — **[disponibile su Amazon →](https://www.amazon.it/dp/B0GYD89B5N)***

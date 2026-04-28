@@ -42,3 +42,7 @@ Non è necessario padroneggiare ogni singola tecnologia oggi stesso. Serve però
 ---
 
 *E voi? Quale nuova tecnologia o percorso di formazione state affrontando per restare aggiornati in questo 2026? Fatemelo sapere nei commenti su LinkedIn o via mail!*
+
+---
+
+*Vuoi consolidare la teoria con lab pratici? Ho pubblicato un libro di laboratori di networking — **[disponibile su Amazon →](https://www.amazon.it/dp/B0GYD89B5N)***

@@ -2,6 +2,9 @@
 layout: post
 title: "L'arte di essere invisibili (Il Paradosso del Network Engineer)"
 date: 2025-12-30
+author: "David Aulicino"
+categories: [Carriera, Networking, Storytelling]
+tags: [Network Engineer, Infrastruttura, Carriera, OSPF, BGP]
 ---
 
 C'è una scena che si ripete identica ogni volta che conosco qualcuno al di fuori del mio settore.
@@ -62,3 +65,7 @@ E a noi va bene così. Basta che non ci (E NON MI) chiamiate "tecnici del comput
 
 ---
 *Ti è piaciuto il post? Connettiamoci su [LinkedIn](https://www.linkedin.com/in/david-aulicino-b9371648) o dai un'occhiata ai miei progetti su GitHub!*
+
+---
+
+*Vuoi consolidare la teoria con lab pratici? Ho pubblicato un libro di laboratori di networking — **[disponibile su Amazon →](https://www.amazon.it/dp/B0GYD89B5N)***

@@ -41,3 +41,7 @@ La differenza filosofica tra i due è totale:
 Il motivo della confusione è che i provider ci consegnano quasi sempre dispositivi **"all-in-one"**. Quel box sulla mensola è contemporaneamente un ONT/Modem, un router, un firewall e un access point Wi-Fi.
 
 È comodo, certo, ma è anche il motivo per cui, quando qualcosa non va, è difficile capire se il problema sia la linea (fibra/rame), la distribuzione interna (router) o un blocco di sicurezza (firewall). Capire chi fa cosa è il primo passo per riprendere davvero il controllo della propria rete.
+
+---
+
+*Vuoi consolidare la teoria con lab pratici? Ho pubblicato un libro di laboratori di networking — **[disponibile su Amazon →](https://www.amazon.it/dp/B0GYD89B5N)***

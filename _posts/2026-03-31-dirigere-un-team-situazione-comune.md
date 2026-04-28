@@ -38,3 +38,7 @@ Oltre al team, andavano gestiti vendor, ISP e partner esterni. Il segreto? Arriv
 Gestire chi non dipende da te ti insegna l'arte dell'influenza senza autorità. Ti abitua a spiegare il *perché* prima del *come* e a costruire fiducia. Non sei un capo, sei una bussola. Ed è un ruolo decisamente più interessante.
 
 Vi è mai capitata una situazione del genere? Come ne siete usciti? Parliamone nei commenti!
+
+---
+
+*Vuoi consolidare la teoria con lab pratici? Ho pubblicato un libro di laboratori di networking — **[disponibile su Amazon →](https://www.amazon.it/dp/B0GYD89B5N)***
