@@ -1,6 +1,9 @@
 name: Scheduled Jekyll Build
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: '0 22 * * *'  # mezzanotte ora italiana (CEST, UTC+2)
   workflow_dispatch:       # permette trigger manuale da GitHub
