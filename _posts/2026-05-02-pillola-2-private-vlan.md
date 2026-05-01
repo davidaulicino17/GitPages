@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pillola #2 — Private VLAN: isolare dispositivi nella stessa subnet senza sprecare IP"
-date: 2026-04-30
+date: 2026-05-02
 author: "David Aulicino"
 categories: [Networking, Pillole]
 tags: [VLAN, PVLAN, Switching, Datacenter, Sicurezza]

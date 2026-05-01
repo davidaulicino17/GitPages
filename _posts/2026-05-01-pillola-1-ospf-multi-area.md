@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pillola #1 — OSPF Multi-Area: perché una sola area non basta mai"
-date: 2026-04-29
+date: 2026-05-01
 author: "David Aulicino"
 categories: [Networking, Pillole]
 tags: [OSPF, Routing, Multi-Area, ABR, LSA]

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pillola #5 — MP-BGP EVPN: quando BGP diventa il control plane del datacenter"
-date: 2026-05-03
+date: 2026-05-05
 author: "David Aulicino"
 categories: [Networking, Pillole]
 tags: [EVPN, BGP, VXLAN, Datacenter, Control Plane]

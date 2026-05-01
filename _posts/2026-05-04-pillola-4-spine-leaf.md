@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pillola #4 — Spine-Leaf: l'architettura che ha reso obsoleto il datacenter a 3 livelli"
-date: 2026-05-02
+date: 2026-05-04
 author: "David Aulicino"
 categories: [Networking, Pillole]
 tags: [Spine-Leaf, Datacenter, ECMP, BGP, Architettura]

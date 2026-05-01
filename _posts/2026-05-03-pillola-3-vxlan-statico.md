@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pillola #3 — VXLAN Statico: il Layer 2 che attraversa qualsiasi rete IP"
-date: 2026-05-01
+date: 2026-05-03
 author: "David Aulicino"
 categories: [Networking, Pillole]
 tags: [VXLAN, Overlay, Datacenter, VTEP, VNI]
