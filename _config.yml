@@ -13,6 +13,7 @@ kramdown:
   hard_wrap: false
 
 permalink: /:year/:month/:day/:title/
+timezone: Europe/Rome
 
 exclude:
   - README.md
